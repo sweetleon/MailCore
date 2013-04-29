@@ -239,6 +239,15 @@
 - (void)setBcc:(NSSet *)addresses;
 
 /*!
+    @abstract Return the list of messageIds from the in-reply-to field
+*/
+- (NSArray *)inReplyTo;
+/*!
+    @abstract Return the list of messageIds from the references field
+*/
+- (NSArray *)references;
+
+/*!
     @abstract	Returns the list of people the message was in reply-to, returns an NSSet containing CTAddress's.
 */
 - (NSSet *)replyTo;

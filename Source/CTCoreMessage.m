@@ -440,6 +440,19 @@ char * etpan_encode_mime_header(char * phrase)
     return nil;
 }
 
+- (NSArray *)inReplyTo {
+    if (myFields->fld_in_reply_to == NULL)
+        return nil;
+    else
+        return MailCoreStringArrayFromClist(myFields->fld_in_reply_to->mid_list);
+}
+- (NSArray *)references {
+    if (myFields->fld_references == NULL)
+        return nil;
+    else
+        return MailCoreStringArrayFromClist(myFields->fld_references->mid_list);
+}
+
 - (NSString *)uid {
     return [NSString stringWithCString:myMessage->msg_uid encoding:NSUTF8StringEncoding];
 }

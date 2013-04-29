@@ -45,3 +45,5 @@ void RaiseException(NSString *exceptionName, NSString *exceptionDesc);
 BOOL StringStartsWith(NSString *string, NSString *subString);
 
 NSString *MailCoreDecodeMIMEPhrase(char *data);
+
+NSArray * MailCoreStringArrayFromClist(clist *list);

@@ -115,3 +115,21 @@ NSString *MailCoreDecodeMIMEPhrase(char *data) {
     free(decodedSubject);
     return result;
 }
+
+NSArray * MailCoreStringArrayFromClist(clist *list) {
+    clistiter *iter;
+    NSMutableArray *stringSet = [NSMutableArray array];
+	char *string;
+    
+    if(list == NULL)
+        return stringSet;
+    
+    for(iter = clist_begin(list); iter != NULL; iter = clist_next(iter)) {
+        string = clist_content(iter);
+        NSString *strObj = [[NSString alloc] initWithUTF8String:string];
+        [stringSet addObject:strObj];
+        [strObj release];
+    }
+    
+    return stringSet;
+}
