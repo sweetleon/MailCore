@@ -41,6 +41,9 @@
 int imap_flags_to_flags(struct mailimap_msg_att_dynamic * att_dyn,
                         struct mail_flags ** result);
 
+// per https://groups.google.com/forum/?fromgroups=#!msg/remail-iphone/SmnEeX9N6As/WqjIhNGZppQJ
+int uid_list_to_env_list(clist * fetch_result, struct mailmessage_list ** result, mailsession * session, mailmessage_driver * driver);
+
 @interface CTCoreFolder (Private)
 @end
 

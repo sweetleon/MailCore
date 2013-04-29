@@ -857,6 +857,7 @@
 					0xb0000000,
 				);
 				PRODUCT_NAME = MailCore;
+				SKIP_INSTALL = YES;
 				WRAPPER_EXTENSION = framework;
 				ZERO_LINK = YES;
 			};
@@ -883,11 +884,13 @@
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_1)",
 					"$(LIBRARY_SEARCH_PATHS_QUOTED_2)",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"-seg1addr",
 					0xb0000000,
 				);
 				PRODUCT_NAME = MailCore;
+				SKIP_INSTALL = YES;
 				STRIP_INSTALLED_PRODUCT = YES;
 				WRAPPER_EXTENSION = framework;
 			};
@@ -905,6 +908,7 @@
 				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 				SYMROOT = build;
 			};
 			name = Debug;
@@ -922,6 +926,7 @@
 				LIBRARY_SEARCH_PATHS = "";
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
 				SYMROOT = build;
 			};
 			name = Release;
@@ -995,6 +1000,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = mailcore;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 			};
 			name = Debug;
 		};
@@ -1008,6 +1014,7 @@
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = mailcore;
 				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				ZERO_LINK = NO;
 			};
 			name = Release;
